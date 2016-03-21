@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html ng-app="webcrew">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Webcrew</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <!--ANGULAR SCRIPTS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+
+    <!--APP CONTROLLERS-->
+    <script src="src/app.js"></script>
+
+    <!--APP SERVICES-->
+    <script src="src/service/appService.js"></script>
+
+    <!--ANGULAR MATERIAL SCRIPTS-->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-resource.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.4.8/angular-locale_pl-pl.min.js"></script>
+
+    <!--ANGULAR MATERIAL CSS-->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--CUSTOM CSS-->
+    <link href="src/css/style.css" rel="stylesheet">
+    <link href="src/css/elements.css" rel="stylesheet">
+
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+    <!--GOOGLE ICONS-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <div class="header" ng-controller="headerCtrl">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">WebCrew</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down" ng-repeat="item in items">
+                    <li><a href="" ng-click="goToSection(item.id)">{{ item.name }}</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    {{ items}}
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="content" ng-controller="contentCtrl">
+        <div ng-repeat="item in items">
+            <div id="{{ item.id }}" class="anchor">
+                <div ng-include="loadBlock(item.id)"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Footer Content</h5>
+
+                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
+                            content.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2014 Copyright Text
+                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<script>
+    $(".button-collapse").sideNav();
+</script>
+</body>
+</html>

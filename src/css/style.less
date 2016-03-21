@@ -1,0 +1,63 @@
+@font-face {
+  font-family: ubuntu;
+  src: url("../font/ubuntu.ttf");
+}
+
+@font-face {
+  font-family: myfont;
+  src: url("../font/webcrew.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    font-family: ubuntu;
+
+    .header {
+      position: fixed;
+      width: 100%;
+
+      nav {
+        background-color: #18bc9c !important;
+      }
+
+      .brand-logo {
+        font-family: myfont;
+      }
+    }
+
+    .content {
+      padding-top: 64px;
+      box-sizing: border-box;
+      min-height: 100%;
+      padding-bottom: 90px;
+
+      .anchor {
+        height: 100vh;
+        margin: 0 auto;
+      }
+    }
+
+    .footer {
+      height: 80px;
+      margin-top: -80px;
+      background: #3498DB;
+
+      footer {
+        background-color: #18bc9c !important;
+      }
+    }
+
+  }
+
+}

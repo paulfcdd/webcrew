@@ -1,0 +1,58 @@
+@font-face {
+  font-family: ubuntu;
+  src: url("../font/ubuntu.ttf");
+}
+@font-face {
+  font-family: myfont;
+  src: url("../font/webcrew.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+html .wrapper,
+body .wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-family: ubuntu;
+}
+html .wrapper .header,
+body .wrapper .header {
+  position: fixed;
+  width: 100%;
+}
+html .wrapper .header nav,
+body .wrapper .header nav {
+  background-color: #18bc9c !important;
+}
+html .wrapper .header .brand-logo,
+body .wrapper .header .brand-logo {
+  font-family: myfont;
+}
+html .wrapper .content,
+body .wrapper .content {
+  padding-top: 64px;
+  box-sizing: border-box;
+  min-height: 100%;
+  padding-bottom: 90px;
+}
+html .wrapper .content .anchor,
+body .wrapper .content .anchor {
+  height: 100vh;
+  margin: 0 auto;
+}
+html .wrapper .footer,
+body .wrapper .footer {
+  height: 80px;
+  margin-top: -80px;
+  background: #3498DB;
+}
+html .wrapper .footer footer,
+body .wrapper .footer footer {
+  background-color: #18bc9c !important;
+}
