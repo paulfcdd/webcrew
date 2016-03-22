@@ -19,8 +19,10 @@ angular
     .controller('AppCtrl', function AppCtrl($scope) {
     })
 
-    .controller('contentCtrl', function contentCtrl($scope, menuItemsList) {
+    .controller('contentCtrl', function contentCtrl($scope, menuItemsList, servicesItemsList) {
         $scope.items = [];
+
+        $scope.cItems = [];
 
         menuItemsList
             .loadAllItems()
@@ -30,7 +32,13 @@ angular
 
         $scope.loadBlock = function(itemid) {
             return $scope.tpl = 'src/tpl/'+itemid+'.tpl.html';
-        }
+        };
+
+        servicesItemsList
+            .loadAllCItems()
+            .then(function (cItems) {
+                $scope.cItems = [].concat(cItems);
+            });
     })
 
     .controller('headerCtrl', function headerCtrl($scope, menuItemsList, $anchorScroll, $location) {

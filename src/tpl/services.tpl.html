@@ -1,1 +1,19 @@
-jgjgoijfdkgfd
+<h3 class="label">Услуги</h3>
+
+<div class="row">
+
+    <div ng-repeat="cItem in cItems" class="col s12 m6 l6 service-block" layout="column" id="{{ cItem.id }}">
+        <div flex>
+            <md-icon>
+                {{ cItem.icon }}
+            </md-icon>
+        </div>
+        <div flex>
+            <h5 class="category-label">{{ cItem.name }}</h5>
+        </div>
+        <div flex>
+            <p class="category-descr">{{ cItem.description }}</p>
+        </div>
+    </div>
+
+</div>

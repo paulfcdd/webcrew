@@ -37,10 +37,10 @@
     <!--JQUERY-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
-    <!-- Compiled and minified CSS -->
+    <!-- GOOGLE MATERIAL COMPILED AND MINIFIED CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
 
-    <!-- Compiled and minified JavaScript -->
+    <!-- GOOGLE MATERIAL COMPILED AND MINIFIED JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 
     <!--GOOGLE ICONS-->
@@ -48,16 +48,20 @@
 </head>
 <body>
 <div class="wrapper">
-    <div class="header" ng-controller="headerCtrl">
+    <div class="header navbar-fixed" ng-controller="headerCtrl">
         <nav>
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo">WebCrew</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down" ng-repeat="item in items">
-                    <li><a href="" ng-click="goToSection(item.id)">{{ item.name }}</a></li>
+                <ul  class="right hide-on-med-and-down">
+                    <li ng-repeat="item in items">
+                        <a href="" ng-click="goToSection(item.id)"><i class="material-icons left">{{ item.icon}}</i>{{ item.name }}</a>
+                    </li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    {{ items}}
+                    <li ng-repeat="item in items">
+                        <a href="" ng-click="goToSection(item.id)">{{ item.name }}</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -102,7 +106,9 @@
     </div>
 </div>
 <script>
-    $(".button-collapse").sideNav();
+    $(".button-collapse").sideNav({
+        closeOnClick: true
+    });
 </script>
 </body>
 </html>

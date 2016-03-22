@@ -23,12 +23,16 @@ body .wrapper {
 }
 html .wrapper .header,
 body .wrapper .header {
-  position: fixed;
   width: 100%;
+}
+html .wrapper .header .nav-wrapper ul li,
+body .wrapper .header .nav-wrapper ul li {
+  text-transform: uppercase;
 }
 html .wrapper .header nav,
 body .wrapper .header nav {
   background-color: #18bc9c !important;
+  padding: 0 10% 0 15%;
 }
 html .wrapper .header .brand-logo,
 body .wrapper .header .brand-logo {
@@ -36,15 +40,15 @@ body .wrapper .header .brand-logo {
 }
 html .wrapper .content,
 body .wrapper .content {
-  padding-top: 64px;
   box-sizing: border-box;
   min-height: 100%;
   padding-bottom: 90px;
 }
 html .wrapper .content .anchor,
 body .wrapper .content .anchor {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
+  padding: 15px 0 0 0;
 }
 html .wrapper .footer,
 body .wrapper .footer {

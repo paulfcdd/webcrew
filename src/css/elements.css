@@ -1,4 +1,67 @@
-#services {
+#main {
   background-image: url("../img/main_bg.jpg");
   background-size: cover;
+}
+#main .h1-logo {
+  font-family: myfont;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+#main .descr-block {
+  color: white;
+  font-weight: 500;
+  font-size: 15pt;
+  text-align: center;
+  padding: 0 20%;
+}
+#services .label {
+  text-align: center;
+  color: grey;
+}
+#services .row {
+  width: 98vw;
+}
+#services .row .service-block {
+  min-height: 40vh;
+  border: 3px solid white;
+  padding-top: 20px;
+}
+#services .row .service-block md-icon {
+  font-size: 58pt;
+  color: grey;
+  transition: 1s;
+  text-align: center;
+}
+#services .row .service-block .category-label {
+  color: grey;
+  text-align: center;
+  transition: 1s;
+}
+#services .row .service-block .category-descr {
+  color: grey;
+}
+#services .row #development {
+  transition: 1s;
+}
+#services .row #development:hover {
+  background-color: #3498DB;
+  transition: 1s;
+}
+#services .row #development:hover md-icon {
+  color: white;
+  transition: 1s;
+}
+#services .row #development:hover .category-label {
+  color: white;
+  transition: 1s;
+}
+#services .row #support {
+  background-color: #00aedb;
+}
+#services .row #seo {
+  background-color: #f37735;
+}
+#services .row #copywrite {
+  background-color: #ffc425;
 }

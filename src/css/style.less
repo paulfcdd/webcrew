@@ -23,12 +23,16 @@ body {
     margin: 0 auto;
     font-family: ubuntu;
 
-    .header {
-      position: fixed;
+    .header  {
       width: 100%;
+
+      .nav-wrapper ul li {
+        text-transform: uppercase;
+      }
 
       nav {
         background-color: #18bc9c !important;
+        padding: 0 10% 0 15%;
       }
 
       .brand-logo {
@@ -37,14 +41,14 @@ body {
     }
 
     .content {
-      padding-top: 64px;
       box-sizing: border-box;
       min-height: 100%;
       padding-bottom: 90px;
 
       .anchor {
-        height: 100vh;
+        min-height: 100vh;
         margin: 0 auto;
+        padding: 15px 0 0 0;
       }
     }
 
