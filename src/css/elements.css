@@ -32,6 +32,8 @@
   color: grey;
   font-size: 58pt;
   transition: 1s;
+  padding: 0;
+  margin: 0 auto;
 }
 #services .row .service-block .category-label {
   color: grey;

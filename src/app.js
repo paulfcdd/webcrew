@@ -50,8 +50,8 @@ angular
                 $scope.items = [].concat(items);
             });
 
+
         $scope.goToSection = function(itemid) {
-            window.console.log(itemid);
 
             var newHash = itemid;
 
