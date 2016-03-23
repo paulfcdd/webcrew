@@ -25,43 +25,26 @@
 #services .row .service-block {
   min-height: 40vh;
   border: 3px solid white;
-  padding-top: 20px;
-}
-#services .row .service-block md-icon {
-  font-size: 58pt;
-  color: grey;
-  transition: 1s;
+  padding: 0;
   text-align: center;
+}
+#services .row .service-block .services-icon {
+  color: grey;
+  font-size: 58pt;
+  transition: 1s;
 }
 #services .row .service-block .category-label {
   color: grey;
-  text-align: center;
   transition: 1s;
 }
 #services .row .service-block .category-descr {
   color: grey;
-}
-#services .row #development {
   transition: 1s;
+  text-align: left;
 }
-#services .row #development:hover {
-  background-color: #3498DB;
-  transition: 1s;
-}
-#services .row #development:hover md-icon {
-  color: white;
-  transition: 1s;
-}
-#services .row #development:hover .category-label {
-  color: white;
-  transition: 1s;
-}
-#services .row #support {
-  background-color: #00aedb;
-}
-#services .row #seo {
-  background-color: #f37735;
-}
+#services .row #development,
+#services .row #support,
+#services .row #seo,
 #services .row #copywrite {
-  background-color: #ffc425;
+  transition: 1s;
 }

@@ -32,55 +32,30 @@
     .service-block {
       min-height: 40vh;
       border: 3px solid white;
-      padding-top:20px;
+      padding: 0;
+      text-align: center;
 
-      md-icon {
-          font-size: 58pt;
-          color: grey;
-          transition: 1s;
-        text-align: center;
+      .services-icon {
+        color: grey;
+        font-size: 58pt;
+        transition: 1s;
       }
 
       .category-label {
         color: grey;
-        text-align: center;
+        //text-align: center;
         transition: 1s;
       }
 
       .category-descr {
         color: grey;
+        transition: 1s;
+        text-align: left;
       }
     }
 
-    #development {
+    #development, #support, #seo, #copywrite {
       transition: 1s;
-    }
-
-    #development:hover {
-      background-color: #3498DB;
-      transition: 1s;
-    }
-
-    #development:hover md-icon {
-        color: white;
-        transition: 1s;
-    }
-
-    #development:hover .category-label {
-        color: white;
-        transition: 1s;
-    }
-
-    #support {
-      background-color: #00aedb;
-    }
-
-    #seo {
-      background-color: #f37735;
-    }
-
-    #copywrite {
-      background-color: #ffc425;
     }
   }
 }

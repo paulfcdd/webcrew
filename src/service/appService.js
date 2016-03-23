@@ -47,19 +47,25 @@ function servicesItemsList($q) {
             icon: 'code',
             id: 'development',
             name: 'Разработка сайтов',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut blandit mi. Integer id laoreet eros. Sed lobortis augue suscipit consequat placerat. Aenean consequat magna vitae ex accumsan iaculis. Sed cursus a purus sed ornare. Nulla facilisi. Nunc malesuada dui sed orci ornare, vitae consequat ante pulvinar. Vestibulum sollicitudin dui velit, ut bibendum dui dignissim a. In scelerisque quis mi id consectetur. In enim arcu, auctor nec vulputate eget, tempus ac neque. Donec sit amet fermentum arcu. Vivamus nibh metus, varius et augue posuere, tristique interdum magna. Duis pharetra nisi eu lectus dictum porta. Fusce venenatis magna a urna maximus dapibus. Phasellus ornare molestie ligula ut commodo.'
+            description: 'Мы разрабатываем проекты любой сложности - от одностраничных лендингов (landing page) и сайтов-визиток до сложных корпоративных порталов и интернет-магазинов.' +
+            'Наши проекты могут быть разработаны как на основе популярных CMS и фрейморков, так и написанны с нуля, все сайты верстаются по методу Mobile first -  ' +
+            'такие сайты смотрятся хорошо и смарт-часах, и на FullHD мониторах '
         },
         {
             icon: 'build',
             id: 'support',
             name: 'Поддержка существующих проектов',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut blandit mi. Integer id laoreet eros. Sed lobortis augue suscipit consequat placerat. Aenean consequat magna vitae ex accumsan iaculis. Sed cursus a purus sed ornare. Nulla facilisi. Nunc malesuada dui sed orci ornare, vitae consequat ante pulvinar. Vestibulum sollicitudin dui velit, ut bibendum dui dignissim a. In scelerisque quis mi id consectetur. In enim arcu, auctor nec vulputate eget, tempus ac neque. Donec sit amet fermentum arcu. Vivamus nibh metus, varius et augue posuere, tristique interdum magna. Duis pharetra nisi eu lectus dictum porta. Fusce venenatis magna a urna maximus dapibus. Phasellus ornare molestie ligula ut commodo.'
+            description: 'Если у Вас уже есть свой проект, но, по какой-то причине, разработчик не может его поддерживать, этим с радостью займемся мы. Мы умеем работать с такими популярными' +
+            'CMS, как Drupal, WordPress, Joomla, OpenCart, фреймворками Symfony, Zend, Yii и многими другими. Не пугают нас и самописные сайты. В рамках поддержки мы возьмем на себя заботы по исправлению' +
+            ' багов, поддержке хостинга, доработке новых модулей и функционала, рефакторингу кода и многое другое'
         },
         {
             icon: 'trending_up',
             id: 'seo',
             name: 'SEO/Контекстная реклама',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut blandit mi. Integer id laoreet eros. Sed lobortis augue suscipit consequat placerat. Aenean consequat magna vitae ex accumsan iaculis. Sed cursus a purus sed ornare. Nulla facilisi. Nunc malesuada dui sed orci ornare, vitae consequat ante pulvinar. Vestibulum sollicitudin dui velit, ut bibendum dui dignissim a. In scelerisque quis mi id consectetur. In enim arcu, auctor nec vulputate eget, tempus ac neque. Donec sit amet fermentum arcu. Vivamus nibh metus, varius et augue posuere, tristique interdum magna. Duis pharetra nisi eu lectus dictum porta. Fusce venenatis magna a urna maximus dapibus. Phasellus ornare molestie ligula ut commodo.'
+            description: 'Даже самый лучший в мире сайт так и останется на задворках Интернета без качественной рекламы и продвижения. Мы умеем не только грамотно настраивать рекламные кампании в Google и Yandex, ' +
+            'но и продвигать сайты другими способами: продвижение поведенческими факторами, ссылками, продвижение в социальных сетях. Мы всегда в тренде всех последних новостей в алгоритмах ранжирования ' +
+            'и выдачи поисковиков Google и Яндекс и с нами Ваш сайт не попадет в бан ПС'
         },
         {
             icon: 'copyright',
