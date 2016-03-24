@@ -32,6 +32,7 @@ body .wrapper .header .nav-wrapper ul li {
 html .wrapper .header nav,
 body .wrapper .header nav {
   background-color: #18bc9c !important;
+  padding: 0 10px 0 10px;
 }
 html .wrapper .header .brand-logo,
 body .wrapper .header .brand-logo {
@@ -42,6 +43,11 @@ body .wrapper .content {
   box-sizing: border-box;
   min-height: 100%;
   padding-bottom: 90px;
+}
+html .wrapper .content .label,
+body .wrapper .content .label {
+  text-align: center;
+  color: grey;
 }
 html .wrapper .content .anchor,
 body .wrapper .content .anchor {
