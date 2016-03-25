@@ -3,6 +3,7 @@
 angular
     .module('webcrew')
     .service('menuItemsList', ['$q', menuItemsList])
+    .service('contactOptions', ['$q', contactOptions])
     .service('servicesItemsList', ['$q', servicesItemsList]);
 
 function menuItemsList($q) {
@@ -86,6 +87,21 @@ function servicesItemsList($q) {
         loadAllCItems: function () {
             // Simulate async nature of real remote calls
             return $q.when(cItems);
+        }
+    };
+}
+
+function contactOptions($q) {
+    var options = [
+        {
+            name: 'telegram',
+            icon: 'src/img/telegram.png'
+        }
+    ];
+
+    return {
+        loadAllContacts: function() {
+            return $q.when(options);
         }
     };
 }

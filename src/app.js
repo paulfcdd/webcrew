@@ -19,10 +19,12 @@ angular
     .controller('AppCtrl', function AppCtrl($scope) {
     })
 
-    .controller('contentCtrl', function contentCtrl($scope, menuItemsList, servicesItemsList) {
+    .controller('contentCtrl', function contentCtrl($scope, menuItemsList, servicesItemsList, contactOptions) {
         $scope.items = [];
 
         $scope.cItems = [];
+
+        $scope.options = [];
 
         menuItemsList
             .loadAllItems()
@@ -39,6 +41,12 @@ angular
             .then(function (cItems) {
                 $scope.cItems = [].concat(cItems);
             });
+
+        contactOptions
+            .loadAllContacts()
+            .then(function(options) {
+                $scope.options = [].concat(options);
+            })
     })
 
     .controller('headerCtrl', function headerCtrl($scope, menuItemsList, $anchorScroll, $location) {

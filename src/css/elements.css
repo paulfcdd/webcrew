@@ -46,3 +46,18 @@
 #services .row #copywrite {
   transition: 1s;
 }
+#contacts .row {
+  width: 98vw;
+}
+#contacts .row .form-block {
+  min-height: 80vh;
+  padding: 0;
+  text-align: center;
+}
+#contacts .row .form-block .category-label {
+  color: grey;
+  transition: 1s;
+}
+#contacts .row .form-block .form-label {
+  text-align: left !important;
+}
