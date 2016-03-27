@@ -7,16 +7,38 @@ angular
         'ngMaterial'
     ])
 
-    .config(['$routeProvider', function ($routeProvider) {
+    .config(['$routeProvider', '$compileProvider', function ($routeProvider, $compileProvider) {
+        $compileProvider
+            .aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|chrome-extension|skype):/);
 
     }])
 
-    .run(['$anchorScroll', function($anchorScroll) {
+    .run(['$anchorScroll', function ($anchorScroll) {
         $anchorScroll.yOffset = 50;   // always scroll by 50 extra pixels
     }])
 
 
     .controller('AppCtrl', function AppCtrl($scope) {
+    })
+
+    .controller('contactCtrl', function contactCtrl($scope, $http) {
+        $scope.sendForm = function (clientName, companyName, clientEmail, clientPhone, projDescr) {
+
+            $http.post(
+                'src/mailSend.php', {
+                    clientName: clientName,
+                    companyName: companyName,
+                    clientEmail: clientEmail,
+                    clientPhone: clientPhone,
+                    projDescr: projDescr
+                }).success(function (data) {
+                    window.console.log(data);
+                }).error(function (status) {
+                    window.console.log('Error with status ' + status);
+                });
+            //window.alert(clientName+', '+companyName+', '+clientEmail+', '+clientPhone+', '+projDescr);
+
+        };
     })
 
     .controller('contentCtrl', function contentCtrl($scope, menuItemsList, servicesItemsList, contactOptions) {
@@ -32,8 +54,8 @@ angular
                 $scope.items = [].concat(items);
             });
 
-        $scope.loadBlock = function(itemid) {
-            return $scope.tpl = 'src/tpl/'+itemid+'.tpl.html';
+        $scope.loadBlock = function (itemid) {
+            return $scope.tpl = 'src/tpl/' + itemid + '.tpl.html';
         };
 
         servicesItemsList
@@ -44,7 +66,7 @@ angular
 
         contactOptions
             .loadAllContacts()
-            .then(function(options) {
+            .then(function (options) {
                 $scope.options = [].concat(options);
             })
     })
@@ -59,7 +81,7 @@ angular
             });
 
 
-        $scope.goToSection = function(itemid) {
+        $scope.goToSection = function (itemid) {
 
             var newHash = itemid;
 

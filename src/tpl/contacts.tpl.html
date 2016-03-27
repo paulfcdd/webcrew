@@ -1,6 +1,6 @@
 <h3 class="label">Контакты</h3>
 
-<div class="row" style="text-align: center">
+<div class="row" style="text-align: center" ng-controller="contactCtrl">
     <div class="col s12 m6 l6 form-block" layout="column" layout-align="center start">
         <div flex layout="row" layout-align="center start" style="width: 100%; display: block; ">
             <h5 class="category-label">Контактная форма</h5>
@@ -10,36 +10,45 @@
             <form class="col s12 m12 l12">
                 <div clas="input-field col s12 m6 l6">
                     <label class="form-label" for="client_name">Ваше имя</label>
-                    <input placeholder="" id="client_name" type="text" class="validate">
+                    <input placeholder="" id="client_name" type="text" class="validate" ng-model="clientName">
                 </div>
                 <div clas="input-field col s12 m6 l6">
                     <label for="company_name">Название Вашей фирмы</label>
-                    <input placeholder="" id="company_name" type="text" class="validate">
+                    <input placeholder="" id="company_name" type="text" class="validate" ng-model="companyName">
                 </div>
                 <div clas="input-field col s12 m6 l6">
                     <label for="client_email">Ваш e-mail</label>
-                    <input placeholder="" id="client_email" type="email" class="validate">
+                    <input placeholder="" id="client_email" type="email" class="validate" ng-model="clientEmail">
                 </div>
                 <div clas="input-field col s12 m6 l6">
                     <label for="client_phone">Ваш телефон</label>
-                    <input placeholder="" id="client_phone" type="tel" class="validate">
+                    <input placeholder="" id="client_phone" type="tel" class="validate" ng-model="clientPhone">
                 </div>
                 <div clas="input-field col s12 m6 l6">
                     <label for="proj_descr">Расскажите о проекте</label>
-                    <textarea id="proj_descr" class="materialize-textarea" length="120"></textarea>
+                    <textarea id="proj_descr" class="materialize-textarea" length="120" ng-model="projDescr"></textarea>
                 </div>
-                <a class="waves-effect waves-light btn"><i class="material-icons left">send</i>Отправить заявку</a>
-            </form>
+                <button class="waves-effect waves-light btn" name="sendForm" ng-click="sendForm(clientName,companyName,clientEmail,clientPhone,projDescr)">
+                    <i class="material-icons left">send</i>Отправить заявку
+                </button>
+
         </div>
     </div>
-
     <div class="col s12 m6 l6 form-block" layout="column" layout-align="center start">
         <div flex layout="row" layout-align="center start" style="width: 100%; display: block; ">
-            <h5 class="category-label">Где мы есть еще?</h5>
+            <h5 class="category-label">Где нас найти?</h5>
         </div>
         <div flex layout="row" layout-align="center start"
              style="width: 100%; display: block;  min-height: 70vh;">
-            {{ options }}
+            <md-list>
+                <md-list-item class="md-2-line" ng-repeat="option in options">
+                    <md-icon><img ng-src="{{option.icon}}"></md-icon>
+                    <div class="md-list-item-text" ng-class="{'md-offset': phone.options.offset }"
+                         style="text-align: left;">
+                        <h3><a href="{{ option.link }}">{{ option.name }}</a></h3>
+                    </div>
+                </md-list-item>
+            </md-list>
         </div>
     </div>
 

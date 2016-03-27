@@ -95,7 +95,13 @@ function contactOptions($q) {
     var options = [
         {
             name: 'telegram',
-            icon: 'src/img/telegram.png'
+            icon: 'src/img/telegram.png',
+            link: 'http://telegram.me/webcrew'
+        },
+        {
+            name: 'skype',
+            icon: 'src/img/skype.png',
+            link: 'skype:webcrew?call'
         }
     ];
 
