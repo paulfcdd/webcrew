@@ -7,10 +7,14 @@ angular
         'ngMaterial'
     ])
 
-    .config(['$routeProvider', '$compileProvider', function ($routeProvider, $compileProvider) {
+    .config(['$routeProvider', '$compileProvider', '$locationProvider' ,function ($routeProvider, $compileProvider, $locationProvider) {
         $compileProvider
             .aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|chrome-extension|skype):/);
 
+        $locationProvider.html5Mode({
+            enabled: true,
+            requireBase: false
+        });
     }])
 
     .run(['$anchorScroll', function ($anchorScroll) {
@@ -21,7 +25,7 @@ angular
     .controller('AppCtrl', function AppCtrl($scope) {
     })
 
-    .controller('contactCtrl', function contactCtrl($scope, $http) {
+    .controller('contactCtrl', function contactCtrl($scope, $http,$mdDialog) {
         $scope.sendForm = function (clientName, companyName, clientEmail, clientPhone, projDescr) {
 
             $http.post(
@@ -32,12 +36,18 @@ angular
                     clientPhone: clientPhone,
                     projDescr: projDescr
                 }).success(function (data) {
-                    window.console.log(data);
+                    $mdDialog.show(
+                        $mdDialog.alert()
+                            .parent(angular.element(document.querySelector('#popupContainer')))
+                            .clickOutsideToClose(true)
+                            .title('Благодарим за контакт!')
+                            .textContent('Ваша форма успешно отправлена. Наш менеджер свяжется с Вами в течении рабочего дня')
+                            .ariaLabel('Success From Send')
+                            .ok('Закрыть')
+                    );
                 }).error(function (status) {
                     window.console.log('Error with status ' + status);
                 });
-            //window.alert(clientName+', '+companyName+', '+clientEmail+', '+clientPhone+', '+projDescr);
-
         };
     })
 

@@ -61,3 +61,6 @@
 #contacts .row .form-block .form-label {
   text-align: left !important;
 }
+#contacts .row .form-block .contact_additional:first-letter {
+  text-transform: capitalize;
+}

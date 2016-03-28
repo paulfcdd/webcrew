@@ -31,9 +31,10 @@
                 <button class="waves-effect waves-light btn" name="sendForm" ng-click="sendForm(clientName,companyName,clientEmail,clientPhone,projDescr)">
                     <i class="material-icons left">send</i>Отправить заявку
                 </button>
-
+            </form>
         </div>
     </div>
+
     <div class="col s12 m6 l6 form-block" layout="column" layout-align="center start">
         <div flex layout="row" layout-align="center start" style="width: 100%; display: block; ">
             <h5 class="category-label">Где нас найти?</h5>
@@ -45,7 +46,7 @@
                     <md-icon><img ng-src="{{option.icon}}"></md-icon>
                     <div class="md-list-item-text" ng-class="{'md-offset': phone.options.offset }"
                          style="text-align: left;">
-                        <h3><a href="{{ option.link }}">{{ option.name }}</a></h3>
+                        <h3 class="contact_additional"><a href="{{ option.link }}">{{ option.name }}</a></h3>
                     </div>
                 </md-list-item>
             </md-list>

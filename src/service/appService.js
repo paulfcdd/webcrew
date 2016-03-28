@@ -102,6 +102,11 @@ function contactOptions($q) {
             name: 'skype',
             icon: 'src/img/skype.png',
             link: 'skype:webcrew?call'
+        },
+        {
+            name: 'whatsapp',
+            icon: 'src/img/whatsapp.png',
+            link: 'whatsapp://send?abid=webcrew&text=Добрый день'
         }
     ];
 

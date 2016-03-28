@@ -21,8 +21,8 @@ $message = "
 Описание: $projDescr
 ";
 
-$headers = 'From: webmaster@example.com' . "\r\n" .
-    'Reply-To: webmaster@example.com' . "\r\n" .
+$headers = 'From: webmaster@webcrew.tk' . "\r\n" .
+    'Reply-To: webcrew' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
 $sendMail =  @mail($to, $subject, $message, $headers);
@@ -32,4 +32,3 @@ if ($sendMail == true) {
 } else {
     echo 'not success';
 }
-//var_dump($clientName);
