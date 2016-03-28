@@ -14,6 +14,7 @@
   font-size: 15pt;
   text-align: center;
   padding: 0 20%;
+  background-color: rgba(66, 66, 66, 0.7);
 }
 #services .row {
   width: 98vw;
@@ -63,4 +64,14 @@
 }
 #contacts .row .form-block .contact_additional:first-letter {
   text-transform: capitalize;
+}
+#about .row {
+  width: 98vw;
+}
+#about .row .category-label {
+  color: grey;
+  text-align: center;
+}
+#about .row .numered-list {
+  list-style-type: decimal !important;
 }
