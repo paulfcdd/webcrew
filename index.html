@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html ng-app="webcrew">
 <head lang="en">
-    <base href="/webcrew/">
     <meta charset="UTF-8">
-    <title>Webcrew - веб-студия, разработка и поддержка сайтов, продвижение, контекстная реклама, копирайт и рерайт текстов</title>
+    <title>Webcrew - веб-студия, разработка и поддержка сайтов, продвижение, контекстная реклама, копирайт и рерайт
+        текстов</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
+    <meta name="description" content="WebCrew - молодая и динамично развивающаяся веб-студия.
+    Мы можем сделать сайт под ключ - сайт-визитка,  landingpage, интернет-магазин, корпоративный портал.
+    Кроме того, мы оказываем услуги, как seo продвижение, копирайтинг, сео-сопровождение, сопровождение сайтов, техническая поддержка сайтов. Мы работаем по всей Украине, в Днепропетровске,
+    Киеве, Львове, Донецке, Харькове, Одессе, Запорожье">
     <link rel="icon" href="src/img/favicon.ico" type="image/ico">
-    <meta name="keywords" content="">
+    <meta name="keywords"
+          content="сделать сайт, сео-продвижение, сайт на заказ, сделать интернет-магазин, веб-студия, веб студия, seo-продвижение, сайт-визитка, веб-студия днепропетровск, сайт недорого, сопровождение сайта, сайт-лендинг, заказать продвижение сайта, landingpage, веб-студия украина, копирайтинг для сайта, продвижение сайта недорого, лендингпейдж, seo, копирайтинг, сео">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
-
     <!--ANGULAR MATERIAL CSS-->
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -31,9 +34,10 @@
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo">WebCrew</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul  class="right hide-on-med-and-down">
+                <ul class="right hide-on-med-and-down">
                     <li ng-repeat="item in items">
-                        <a href="" ng-click="goToSection(item.id)"><i class="material-icons left">{{ item.icon}}</i>{{ item.name }}</a>
+                        <a href="" ng-click="goToSection(item.id)"><i class="material-icons left">{{ item.icon}}</i>{{
+                            item.name }}</a>
                     </li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
@@ -57,27 +61,57 @@
         <footer class="page-footer">
             <div class="container">
                 <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">WebCrew - веб-студия для Вас</h5>
-
-                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
-                            content.</p>
+                    <div class="col l4 m4 s12">
+                        <h5 class="white-text">WebCrew. Because Web rocks</h5>
                     </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Links</h5>
-                        <ul>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                        </ul>
+                    <div class="col l4 m4 s12">
+                        <h5 class="white-text">Свяжитесь с нами</h5>
+                        <table>
+                            <tr>
+                                <td>
+                                    <md-icon class="white-text">email</md-icon>
+                                </td>
+                                <td>
+                                    <p class="grey-text text-lighten-4">
+                                        contact@webcrew.tk
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <md-icon class="white-text"><img src="src/img/skype_footer.png"></md-icon>
+                                </td>
+                                <td>
+                                    <p class="grey-text text-lighten-4">
+                                        webcrew_tk
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
+                    <div class="col l4 m4 s12"><h5 class="white-text">Мы в социальных сетях</h5></div>
+                    <!--<div class="col l6 s12">-->
+                    <!--<h5 class="white-text">WebCrew. Because Web rocks</h5>-->
+                    <!--<md-icon>email</md-icon>-->
+                    <!--<p class="grey-text text-lighten-4">-->
+                    <!--contact@webcrew.tk-->
+                    <!--</p>-->
+                    <!--</div>-->
+                    <!--<div class="col l4 offset-l2 s12">-->
+                    <!--<h5 class="white-text">Links</h5>-->
+                    <!--<ul>-->
+                    <!--<li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>-->
+                    <!--<li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>-->
+                    <!--<li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>-->
+                    <!--<li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>-->
+                    <!--</ul>-->
+                    <!--</div>-->
                 </div>
             </div>
             <div class="footer-copyright">
                 <div class="container">
                     © 2016 Proudly made by WebCrew
-                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                    <!--<a class="grey-text text-lighten-4 right" href="#!">More Links</a>-->
                 </div>
             </div>
         </footer>
@@ -113,10 +147,17 @@
     });
 </script>
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-75466798-1', 'auto');
     ga('send', 'pageview');
@@ -126,32 +167,39 @@
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
+        (w[c] = w[c] || []).push(function () {
             try {
                 w.yaCounter36304360 = new Ya.Metrika({
-                    id:36304360,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true,
-                    webvisor:true,
-                    trackHash:true
+                    id: 36304360,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true,
+                    trackHash: true
                 });
-            } catch(e) { }
+            } catch (e) {
+            }
         });
 
         var n = d.getElementsByTagName("script")[0],
                 s = d.createElement("script"),
-                f = function () { n.parentNode.insertBefore(s, n); };
+                f = function () {
+                    n.parentNode.insertBefore(s, n);
+                };
         s.type = "text/javascript";
         s.async = true;
         s.src = "https://mc.yandex.ru/metrika/watch.js";
 
         if (w.opera == "[object Opera]") {
             d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
+        } else {
+            f();
+        }
     })(document, window, "yandex_metrika_callbacks");
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/36304360" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/36304360" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
 <!-- /Yandex.Metrika counter -->
 </body>
 </html>
