@@ -75,3 +75,10 @@
 #about .row .numered-list {
   list-style-type: decimal !important;
 }
+#about .row .descr {
+  color: grey;
+  font-size: 14pt;
+}
+#about .row .collection {
+  color: grey;
+}
